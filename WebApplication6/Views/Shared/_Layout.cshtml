@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="~/fonts/custom-font/fonts.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css" />
+    <!-- Bootsnav -->
+    <link rel="stylesheet" href="~/Content/bootsnav.css">
+    <!-- Fancybox -->
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="~/Content/custom.css" />
+
+    <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <div class="top_nav">
+            <div class="container">
+                <ul class="list-inline info">
+                    <li><span class="fa fa-home"></span>@Html.ActionLink("Главная", "Index")</li>
+                    <li><span class="fa fa-flag"></span>@Html.ActionLink("Наши проекты", "Portfolio")</li>
+                    <li><span class="fa fa-flag"></span>@Html.ActionLink("Профнастил", "Materials")</li>
+                    <li><span class="fa fa-map"></span>@Html.ActionLink("О нас", "Contacts")</li>
+                    <li><a href="#"><span class="fa fa-phone"></span>+7 (8452) 29-22-53</a></li>
+                    <!-- <li><a href="http://www.monte-avo.ru/"><span class="fa fa-share"></span>Главный сайт</a></li>-->B  
+                    <li><a href="#"><span class="fa fa-clock-o"></span> @DateTime.Now</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </header><!-- Header end -->
+    @RenderBody()
+</body>
+</html>

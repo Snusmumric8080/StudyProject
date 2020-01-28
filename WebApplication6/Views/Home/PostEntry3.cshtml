@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<link rel="stylesheet" href="~/Content/EmailStyle.css" />
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <style>
+        span {
+            color: orange;
+        }
+
+        input {
+            color: lawngreen;
+        }
+
+        body {
+            background-image: url(~/Content/images/slider_img2.jpg);
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="FeedBack3">
+        <section>
+            <div>
+                <div class="carousel-caption">
+                    3
+                    <h1 class="second_heading" style="text-align:center"><span>Данные расчетов</span></h1>
+                    <span>
+                        Количество материалов:</p><p>Поскольку ширина ската меньше максимальной длины листа профнастила, его можно положить в один ряд. Для этого необходимы листы длиной <strong><input name ="skat_width3" value="@ViewBag.skat_width" /> м.</strong> в количестве <strong><input name ="profnastil_list_row3" value="@ViewBag.profnastil_list_row" /> шт</strong>.</p><p>Количество рядов обрешетки: <strong><input name ="calc_row_obresetka3" value="@ViewBag.calc_row_obresetka" /></strong>. Количество брусков 50х50 длиной 3 м: <strong><input name="calc_obresetka3" value="@ViewBag.calc_obresetka" /> шт</strong>.</p><p><strong>Стоимость материалов:</strong></p><p>Стоимость брусьев обрешетки составит: <strong><input name="calc_cost_obresetka3" value="@ViewBag.calc_cost_obresetka" /> рублей</strong>.</p><p>Стоимость выбранной пароизоляции и гидроизоляции составит: <strong><input name="calc_barrier3" value="@ViewBag.calc_barrier" /> рублей</strong>.</p><p>Расчет утеплителя сделан для слоя, толщиной в 200 мм. Его стоимость составит: <strong><input name="calc_insulation3" value="@ViewBag.calc_insulation" /> рублей</strong>.</p><p>Стоимость необходимого количества листов профнастила: <strong><input name="cost_profnastil3" value="@ViewBag.cost_profnastil" /> рублей</strong>.</p><p><strong>Итого стоимость материалов для кровли составит: <input name="total_cost3" value="@ViewBag.total_cost" /> рублей</strong>.</p>
+                    </span>
+                    <h3>Отправить на почту рузультат?</h3>
+                    <div class="form-row">
+                        <input type="text" id="email" name="email" required autocomplete="off"><label for="email">Email</label>
+
+
+
+                        <input type="submit" class="btn know_btn" value="Отправить">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        </form>
+</body>
+</html>
